@@ -1,0 +1,763 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExecScriptJob</name>
+    </assembly>
+    <members>
+        <member name="T:ExecScriptJob.Controllers.OrganizationController">
+            <summary>
+            账套api
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.OrganizationController._sqliteSql">
+            <summary>
+            主db操作
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.OrganizationController.#ctor(IFreeSql{ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sqliteSql"></param>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.OrganizationController.Info(System.String,System.String)">
+            <summary>
+            获取账套信息
+            </summary>
+            <param name="code">账套编码</param>
+            <param name="name">账套名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.OrganizationController.Insert(ExecScriptJob.Model.ApiDtos.Organization)">
+            <summary>
+            新增账套信息
+            </summary>
+            <param name="organization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.OrganizationController.Update(ExecScriptJob.Model.ApiDtos.Organization)">
+            <summary>
+            修改账套信息
+            </summary>
+            <param name="organization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.OrganizationController.Delete(System.Int32)">
+            <summary>
+            删除账套信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.Controllers.ScriptController">
+            <summary>
+            脚本Api
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.ScriptController._sqliteSql">
+            <summary>
+            主db操作
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.ScriptController.#ctor(IFreeSql{ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sqliteSql"></param>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.ScriptController.Info(System.String,System.String)">
+            <summary>
+            获取脚本信息
+            </summary>
+            <param name="code">编码</param>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.ScriptController.Insert(ExecScriptJob.Model.ApiDtos.Script)">
+            <summary>
+            新增脚本信息
+            </summary>
+            <param name="script"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.ScriptController.Update(ExecScriptJob.Model.ApiDtos.Script)">
+            <summary>
+            修改脚本信息
+            </summary>
+            <param name="script"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.ScriptController.Delete(System.Int32)">
+            <summary>
+            删除脚本信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.Controllers.TasksController">
+            <summary>
+            任务api
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.TasksController._sqliteSql">
+            <summary>
+            主db操作
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksController.#ctor(IFreeSql{ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sqliteSql"></param>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksController.Info(System.String,System.String)">
+            <summary>
+            任务信息
+            </summary>
+            <param name="code">编码</param>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksController.Insert(ExecScriptJob.Model.ApiDtos.Tasks)">
+            <summary>
+            新增任务信息
+            </summary>
+            <param name="tasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksController.Update(ExecScriptJob.Model.ApiDtos.Tasks)">
+            <summary>
+            修改任务信息
+            </summary>
+            <param name="tasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksController.Delete(System.Int32)">
+            <summary>
+            删除任务信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.Controllers.TasksDetailController">
+            <summary>
+            任务明细
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.TasksDetailController._sqliteSql">
+            <summary>
+            主db操作
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksDetailController.#ctor(IFreeSql{ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sqliteSql"></param>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksDetailController.Info(System.String)">
+            <summary>
+            任务明细信息
+            </summary>
+            <param name="code">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksDetailController.Insert(ExecScriptJob.Model.ApiDtos.TasksDetail)">
+            <summary>
+            新增任务明细信息
+            </summary>
+            <param name="tasksDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksDetailController.Update(ExecScriptJob.Model.ApiDtos.TasksDetail)">
+            <summary>
+            修改任务明细信息
+            </summary>
+            <param name="tasksDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.TasksDetailController.Delete(System.Int32)">
+            <summary>
+            删除任务明细信息
+            </summary>
+            <param name="taskCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.Controllers.UserController">
+            <summary>
+            登录时用
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Controllers.UserController.Configuration">
+            <summary>
+            获取配置文件类
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.UserController.tokenHelper">
+            <summary>
+            tokenhelper
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.Controllers.UserController._sqliteSql">
+            <summary>
+            主db操作
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.UserController.#ctor(IFreeSql{ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag},ExecScriptJob.JWT.ITokenHelper,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sqliteSql"></param>
+            <param name="_tokenHelper"></param>
+            <param name="_configuration"></param>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.UserController.Login(ExecScriptJob.Model.Request.LoginForm)">
+            <summary>
+            登录
+            </summary>
+            <param name="loginForm"></param>
+            <returns>登录成功后返回token</returns>
+        </member>
+        <member name="M:ExecScriptJob.Controllers.UserController.Info(System.String)">
+            <summary>
+            用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.JWT.AuthTokenHeaderParameter">
+            <summary>
+            swagger 添加Token参数
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.AuthTokenHeaderParameter.Configuration">
+            <summary>
+            获取配置文件类
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.JWT.AuthTokenHeaderParameter.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_configuration"></param>
+        </member>
+        <member name="M:ExecScriptJob.JWT.AuthTokenHeaderParameter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            实现方法
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ExecScriptJob.JWT.ITokenHelper">
+            <summary>
+            token工具类的接口，方便使用依赖注入，很简单提供两个常用的方法
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.JWT.ITokenHelper.CreateToken``1(``0)">
+            <summary>
+            根据一个对象通过反射提供负载生成token
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.ITokenHelper.CreateToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            根据键值对提供负载生成token
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.ITokenHelper.ValiToken(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean})">
+            <summary>
+            Token验证
+            </summary>
+            <param name="encodeJwt">token</param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.ITokenHelper.ValiTokenState(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean},System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            带返回状态的Token验证
+            </summary>
+            <param name="encodeJwt">token</param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值</param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.JWT.JWTConfig">
+            <summary>
+            配置token生成信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.JWTConfig.Issuer">
+            <summary>
+            Token发布者
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.JWTConfig.Audience">
+            <summary>
+            oken接受者
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.JWTConfig.IssuerSigningKey">
+            <summary>
+            秘钥
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.JWTConfig.AccessTokenExpiresHours">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.JWT.TnToken">
+            <summary>
+            存放Token 跟过期时间的类
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.TnToken.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.JWT.TnToken.Expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.JWT.TokenHelper">
+            <summary>
+            Token生成类
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.#ctor(Microsoft.Extensions.Options.IOptions{ExecScriptJob.JWT.JWTConfig})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.CreateToken``1(``0)">
+            <summary>
+            根据一个对象通过反射提供负载生成token
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.CreateToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            根据键值对提供负载生成token
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.CreateTokenString(System.Collections.Generic.List{System.Security.Claims.Claim})">
+            <summary>
+            生成token
+            </summary>
+            <param name="claims">List的 Claim对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.ValiToken(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean})">
+            <summary>
+            验证身份 验证签名的有效性
+            </summary>
+            <param name="encodeJwt"></param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值， </param>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.ToUnixEpochDate(System.DateTime)">
+            <summary>
+            时间转换
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExecScriptJob.JWT.TokenHelper.ValiTokenState(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean},System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            验证状态
+            </summary>
+            <param name="encodeJwt"></param>
+            <param name="validatePayLoad"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.JWT.TokenType">
+            <summary>
+            token验证结果
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.JWT.TokenType.Ok">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.JWT.TokenType.Fail">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:ExecScriptJob.JWT.TokenType.Expired">
+            <summary>
+            过期
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.OrganizationList">
+            <summary>
+            账套信息列表
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.OrganizationList.Items">
+            <summary>
+            账套信息列表
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.OrganizationList.Total">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.Organization">
+            <summary>
+            账套信息dto
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.Code">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.DbType">
+            <summary>
+            数据库类型
+            0 oracle,1 sqlserver,2 mysql
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.ServerName">
+            <summary>
+            数据库地址
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.UserName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.DataBaseName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.ConnectingString">
+            <summary>
+            数据库链接
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Organization.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.ScriptList">
+            <summary>
+            脚本数据信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.ScriptList.Items">
+            <summary>
+            脚本list
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.ScriptList.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.Script">
+            <summary>
+            脚本信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Script.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Script.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Script.SqlString">
+            <summary>
+            脚本
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Script.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.TasksList">
+            <summary>
+            任务列表
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksList.Items">
+            <summary>
+            任务list
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksList.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.Tasks">
+            <summary>
+            任务
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Tasks.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Tasks.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.Tasks.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.TasksDetailList">
+            <summary>
+            任务明细
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksDetailList.Items">
+            <summary>
+            明细list
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksDetailList.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.TasksDetail">
+            <summary>
+            任务明细信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksDetail.TaskCode">
+            <summary>
+            主表code
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksDetail.ScriptCode">
+            <summary>
+            脚本code
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.TasksDetail.OrgCode">
+            <summary>
+            账套code
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.User">
+            <summary>
+            response user
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.User.Roles">
+            <summary>
+            权限组
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.User.Introduction">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.User.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.User.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.User.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.ApiDtos.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.UserInfo.Introduction">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.UserInfo.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.UserInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.ApiDtos.UserInfo.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.FreeSqlHelper.SqlLiteFlag">
+            <summary>
+             sqlite主标志类
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.Request.LoginForm">
+            <summary>
+            登录入参
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.Request.LoginForm.username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.Request.LoginForm.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Model.Response.CommonResponse">
+            <summary>
+            通用信息返回类
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.Response.CommonResponse.code">
+            <summary>
+            0 成功
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.Response.CommonResponse.message">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:ExecScriptJob.Model.Response.CommonResponse.data">
+            <summary>
+            主数据
+            </summary>
+        </member>
+        <member name="T:ExecScriptJob.Program">
+            <summary>
+            启动函数
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Program.Main(System.String[])">
+            <summary>
+            启动方法
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ExecScriptJob.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            创建主机
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExecScriptJob.Startup">
+            <summary>
+            主机启动后配置类
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:ExecScriptJob.Startup.Configuration">
+            <summary>
+            读取配置文件
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ExecScriptJob.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+             This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:ExecScriptJob.SwaggerModel.ApplyTagDescriptions">
+            <summary>
+            Swagger description
+            </summary>
+        </member>
+        <member name="M:ExecScriptJob.SwaggerModel.ApplyTagDescriptions.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            apply 方法
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:JWTToken.Filter.TokenFilter">
+            <summary>
+            Token过滤器
+            </summary>
+        </member>
+        <member name="P:JWTToken.Filter.TokenFilter.Configuration">
+            <summary>
+            获取配置文件类
+            </summary>
+        </member>
+        <member name="M:JWTToken.Filter.TokenFilter.#ctor(ExecScriptJob.JWT.ITokenHelper,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_tokenHelper"></param>
+            <param name="_configuration"></param>
+        </member>
+        <member name="M:JWTToken.Filter.TokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            执行完成
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:JWTToken.Filter.TokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            执行之前
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
